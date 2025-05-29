@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="he">
   <head>
-    <meta http-equiv="refresh" content="0; url=https://surense.com/app/p/yU67SDP" />
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; URL='https://surense.com/app/p/yU67SDP'" />
+    <title>מעביר אותך לעמוד...</title>
   </head>
   <body>
-    <p>מופנה לעמוד...</p>
+    <p>מעביר אותך לעמוד, אנא המתן...</p>
   </body>
 </html>
