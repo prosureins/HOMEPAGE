@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>איתי צאיג | כל השירותים</title>
+
+  <!-- מיתוג וזהות חזותית -->
+  <link rel="icon" href="LOGO 500X500.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500&family=Secular+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+      body{font-family:'Assistant',sans-serif;background:#F9FAF4;}
+      h1,h2,h3{font-family:'Secular One',sans-serif;}
+      .gradient-bg{background:linear-gradient(90deg,#20A0E0,#00A060);}
+      .card-shadow{box-shadow:0 4px 20px rgba(0,160,96,.15);}
+  </style>
+</head>
+<body>
+
+<!-- פס-עליון קטן + חזרה הביתה -->
+<header class="py-4 px-6 flex justify-between items-center bg-white shadow-sm">
+  <a href="index.html"><img src="LOGO 500X500.png" alt="לוגו איתי צאיג" class="h-12 w-auto"></a>
+  <a href="index.html#contact" class="text-[#00A060] hover:text-[#008050] font-semibold flex items-center">
+      חזרה לעמוד הפנייה&nbsp;<i class="fas fa-arrow-left"></i>
+  </a>
+</header>
+
+<!-- Hero של העמוד -->
+<section class="py-20 text-center">
+  <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">כל השירותים שלנו</h1>
+  <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+      פתרונות מלאים להגנה ולצמיחה פיננסית – מביטוחי־בריאות ועד תכנון פנסיוני מתקדם.
+  </p>
+</section>
+
+<!-- כרטיסי השירות -->
+<section class="px-4 md:px-10 lg:px-20 pb-24">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- פנסיה -->
+    <article class="bg-white p-8 rounded-xl card-shadow text-center">
+      <div class="text-[#00A060] text-5xl mb-4"><i class="fas fa-piggy-bank"></i></div>
+      <h3 class="text-2xl font-bold text-gray-800 mb-3">תכנון פנסיוני מתקדם</h3>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        התאמת תיק פנסיה אופטימלי: ניתוח דמי ניה, תשואות ומסלולים, שילוב קופות גמל וקרנות השתלמות – הכול בשקיפות מלאה.
+      </p>
+      <a href="index.html#contact"
+         class="bg-[#00A060] hover:bg-[#008050] text-white py-3 px-6 rounded-lg font-medium inline-block">
+         לקביעת פגישת תכנון&nbsp;<i class="fas fa-arrow-left mr-1"></i>
+      </a>
+    </article>
+
+    <!-- ביטוח בריאות -->
+    <article class="bg-white p-8 rounded-xl card-shadow text-center">
+      <div class="text-[#20A0E0] text-5xl mb-4"><i class="fas fa-heartbeat"></i></div>
+      <h3 class="text-2xl font-bold text-gray-800 mb-3">ביטוח בריאות פרטי</h3>
+      <p class="text-gray-700 mb-6">
+        מבחר פוליסות הכוללות תרופות מצילות-חיים, השתלות, ניתוחים בחו״ל ושירותי FAST-TRACK – מותאם אישית עבורך.
+      </p>
+      <a href="index.html#contact" class="bg-[#00A060] hover:bg-[#008050] text-white py-3 px-6 rounded-lg font-medium">
+         בדיקת כיסוי קיים
+      </a>
+    </article>
+
+    <!-- ביטוח חיים -->
+    <article class="bg-white p-8 rounded-xl card-shadow text-center">
+      <div class="text-[#00A060] text-5xl mb-4"><i class="fas fa-shield-alt"></i></div>
+      <h3 class="text-2xl font-bold text-gray-800 mb-3">ביטוח חיים</h3>
+      <p class="text-gray-700 mb-6">
+        הגנה כלכלית למשפחה במקרה של אירוע מוות או אובדן כושר עבודה, עם אפשרות לכיסוי משכנתה והרחבות ייחודיות.
+      </p>
+      <a href="index.html#contact" class="bg-[#00A060] hover:bg-[#008050] text-white py-3 px-6 rounded-lg font-medium">
+         קבל הצעת מחיר
+      </a>
+    </article>
+
+    <!-- פיננסים -->
+    <article class="bg-white p-8 rounded-xl card-shadow text-center">
+      <div class="text-[#20A0E0] text-5xl mb-4"><i class="fas fa-chart-line"></i></div>
+      <h3 class="text-2xl font-bold text-gray-800 mb-3">פתרונות פיננסיים</h3>
+      <p class="text-gray-700 mb-6">
+        פוליסות חיסכון, קופות גמל להשקעה, תיקי השקעות מנוהלים ותכניות חיסכון גמישות – לצמיחה מבוקרת של ההון.
+      </p>
+      <a href="index.html#contact" class="bg-[#00A060] hover:bg-[#008050] text-white py-3 px-6 rounded-lg font-medium">
+         להתחיל להשקיע חכם
+      </a>
+    </article>
+
+    <!-- נסיעות -->
+    <article class="bg-white p-8 rounded-xl card-shadow text-center">
+      <div class="text-[#00A060] text-5xl mb-4"><i class="fas fa-plane"></i></div>
+      <h3 class="text-2xl font-bold text-gray-800 mb-3">ביטוח נסיעות לחו״ל</h3>
+      <p class="text-gray-700 mb-6">
+        כיסוי PassportCard עם כרטיס חיוב מיידי, מוקד 24/7 ושירותי רפואה גלובליים – כדי שתטוס בראש שקט.
+      </p>
+      <a href="index.html#contact" class="bg-[#00A060] hover:bg-[#008050] text-white py-3 px-6 rounded-lg font-medium">
+         לבטח את הטיול
+      </a>
+    </article>
+
+    <!-- ייעוץ אישי -->
+    <article class="bg-white p-8 rounded-xl card-shadow text-center">
+      <div class="text-[#20A0E0] text-5xl mb-4"><i class="fas fa-hand-holding-usd"></i></div>
+      <h3 class="text-2xl font-bold text-gray-800 mb-3">ייעוץ אישי 360°</h3>
+      <p class="text-gray-700 mb-6">
+        פגישה דיסקרטית בה ננתח יחד את מכלול הצרכים הפנסיוניים, הביטוחיים והפיננסיים – ונבנה תכנית מותאמת אישית.
+      </p>
+      <a href="index.html#contact" class="bg-[#00A060] hover:bg-[#008050] text-white py-3 px-6 rounded-lg font-medium">
+         לתאם פגישה
+      </a>
+    </article>
+
+  </div>
+</section>
+
+<!-- CTA תחתון -->
+<section class="gradient-bg py-16 text-white text-center">
+  <h2 class="text-3xl font-bold mb-4">מוכנים לשקט פיננסי?</h2>
+  <p class="text-xl mb-8">השאירו פרטים עכשיו ונחזור אליכם לשיחת אבחון ראשונית – ללא עלות וללא התחייבות.</p>
+  <a href="index.html#contact" class="bg-white text-[#00A060] hover:bg-gray-100 px-8 py-3 rounded-lg font-medium text-lg inline-block">
+      השארת פרטים&nbsp;<i class="fas fa-arrow-left mr-2"></i>
+  </a>
+</section>
+
+<!-- פוטר קצר -->
+<footer class="bg-gray-800 text-gray-400 text-center py-6 px-4">
+  © 2025 Itay Tzaig Insurance Agency | האורזים 2 נתניה | 053-3321364
+</footer>
+
+</body>
+</html>
