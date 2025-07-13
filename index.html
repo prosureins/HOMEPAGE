@@ -1,11 +1,382 @@
 <!DOCTYPE html>
-<html lang="he">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; URL='https://surense.com/app/p/yU67SDP'" />
-    <title>מעביר אותך לעמוד...</title>
-  </head>
-  <body>
-    <p>מעביר אותך לעמוד, אנא המתן...</p>
-  </body>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>איתי צאיג – מומחה פנסיה, ביטוח ופיננסים | השאירו פרטים</title>
+  <meta name="description"
+        content="איתי צאיג – סוכן ביטוח פנסיוני מקצועי. ייעוץ מתקדם בפנסיה, ביטוח בריאות, ביטוח חיים ופתרונות פיננסיים. השאירו פרטים לייעוץ יוקרתי ללא התחייבות.">
+  <link rel="icon" href="LOGO 500X500.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500&family=Secular+One&display=swap" rel="stylesheet">
+
+  <style>
+    body{font-family:'Assistant',sans-serif;background:#F9FAF4;}
+    h1,h2,h3,h4{font-family:'Secular One',sans-serif;}
+    .gradient-bg{background:linear-gradient(90deg,#20A0E0,#00A060);}
+    .card-shadow{box-shadow:0 4px 20px rgba(0,160,96,.2);}
+    .fade-in{opacity:0;transform:translateY(20px);transition:.6s ease-out;}
+    .fade-in.visible{opacity:1;transform:translateY(0);}
+    .whatsapp-float{position:fixed;bottom:40px;left:40px;width:60px;height:60px;
+                    background:#25D366;border-radius:50%;display:flex;align-items:center;
+                    justify-content:center;font-size:30px;color:#fff;z-index:100;
+                    box-shadow:2px 2px 3px #999;transition:.3s;}
+    .whatsapp-float:hover{background:#128C7E;transform:scale(1.1);}
+    .accordion-content{max-height:0;overflow:hidden;transition:max-height .3s;}
+    .testimonial-card{flex:0 0 300px;scroll-snap-align:start;}
+    .testimonials-container{scroll-snap-type:x mandatory;}
+    input:invalid,select:invalid{border-color:#f87171;}
+    input:valid,select:valid{border-color:#4ade80;}
+  </style>
+</head>
+<body>
+
+<!-- כפתור WhatsApp צף -->
+<a href="https://wa.me/972533321364" class="whatsapp-float" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Hero -->
+<section class="py-20 px-4 md:px-10 lg:px-20">
+  <div class="container mx-auto flex flex-col md:flex-row items-center">
+    
+    <!-- טקסט -->
+    <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+      <div class="text-center md:text-right">
+        <img src="LOGO 500X500.png" alt="לוגו איתי צאיג" class="mx-auto md:mr-0 h-28 w-auto mb-6">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          המקצוענות שלנו – השקט שלך!
+        </h1>
+        <p class="text-xl text-gray-600 mb-8">
+          ייעוץ פנסיוני וביטוחי מותאם-אישית, המבוסס על סטנדרט מקצועיות בלתי-מתפשר.
+        </p>
+        <div class="flex justify-center md:justify-start space-x-reverse space-x-4">
+          <a href="#contact" class="bg-[#00A060] hover:bg-[#008050] text-white px-6 py-3 rounded-lg font-medium transition">
+            שיחת ייעוץ יוקרתית
+          </a>
+          <a href="#services" class="border-2 border-[#20A0E0] text-[#20A0E0] hover:bg-[#20A0E0] hover:text-white px-6 py-3 rounded-lg font-medium transition">
+            השירותים שלנו
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- טופס -->
+    <div class="md:w-1/2 fade-in" id="contact">
+      <div class="bg-white p-8 rounded-xl shadow-lg card-shadow max-w-md mx-auto">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">
+          השאירו פרטים ונחזור אליכם
+        </h2>
+
+        <form id="contactForm" class="space-y-4" novalidate>
+          <div>
+            <label for="fullName" class="block text-gray-700 mb-2">שם מלא *</label>
+            <input id="fullName" name="fullName" required
+                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00A060] focus:border-transparent">
+          </div>
+          <div>
+            <label for="phone" class="block text-gray-700 mb-2">טלפון נייד *</label>
+            <input id="phone" name="phone" required pattern="[0-9]{9,10}"
+                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00A060] focus:border-transparent">
+            <p class="text-red-500 text-sm mt-1 hidden" id="phoneError">מספר טלפון לא תקין</p>
+          </div>
+          <div>
+            <label for="email" class="block text-gray-700 mb-2">אימייל *</label>
+            <input id="email" name="email" type="email" required
+                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00A060] focus:border-transparent">
+            <p class="text-red-500 text-sm mt-1 hidden" id="emailError">כתובת אימייל לא תקינה</p>
+          </div>
+          <div>
+            <label for="subject" class="block text-gray-700 mb-2">נושא הפנייה *</label>
+            <select id="subject" name="subject" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00A060] focus:border-transparent">
+              <option value="" disabled selected>בחר נושא</option>
+              <option value="pension">פנסיה</option>
+              <option value="health">ביטוח בריאות</option>
+              <option value="life">ביטוח חיים</option>
+              <option value="finance">פיננסים</option>
+              <option value="travel">ביטוח נסיעות לחו״ל</option>
+            </select>
+          </div>
+          <button type="submit"
+                  class="w-full bg-[#00A060] hover:bg-[#008050] text-white py-3 rounded-lg font-medium transition flex items-center justify-center">
+            אני רוצה לשמוע עוד&nbsp;<i class="fas fa-arrow-left mr-2"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="py-16 px-4 md:px-10 lg:px-20 bg-white" id="about">
+  <div class="container mx-auto fade-in">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">אודות איתי צאיג</h2>
+
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center">
+      <div class="md:w-1/3 mb-8 md:mb-0">
+        <img src="https://via.placeholder.com/300x300?text=Itay+Tzaig"
+             alt="איתי צאיג" class="rounded-full w-48 h-48 object-cover mx-auto shadow-lg">
+      </div>
+
+      <div class="md:w-2/3 md:pr-8">
+        <p class="text-lg text-gray-700 mb-4">
+          איתי צאיג – סוכן ביטוח פנסיוני בעל מומחיות מקיפה וניהול מאות תיקים מורכבים.  
+          כל לקוח מקבל ליווי אישי, שקיפות מוחלטת והסבר מפורט על כל אפשרות, כדי שתוכלו ליהנות משקט פיננסי מוחלט.
+        </p>
+
+        <div class="flex space-x-reverse space-x-4 justify-center md:justify-start">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-[#00A060]">100%</div>
+            <div class="text-gray-600">מקצועיות ושקיפות</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-[#20A0E0]">1,000+</div>
+            <div class="text-gray-600">לקוחות מרוצים</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="py-16 px-4 md:px-10 lg:px-20 bg-[#F9FAF4]">
+  <div class="container mx-auto fade-in">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">תחומי השירות שלנו</h2>
+    <p class="text-xl text-center text-gray-600 mb-12">המומחיות שלנו – ההגנה שלך</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- כרטיס שירות לדוגמה -->
+      <div class="bg-white p-6 rounded-xl shadow-md card-shadow hover:scale-105 transition">
+        <div class="text-[#00A060] text-4xl mb-4"><i class="fas fa-piggy-bank"></i></div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">תכנון פנסיוני</h3>
+        <p class="text-gray-600">
+          פתרונות פנסיה מותאמים-אישית, ניתוח תיק קיים והמלצות לשיפור התשואות וההגנות שלך.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-md card-shadow hover:scale-105 transition">
+        <div class="text-[#20A0E0] text-4xl mb-4"><i class="fas fa-heartbeat"></i></div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">ביטוח בריאות</h3>
+        <p class="text-gray-600">
+          פוליסות בריאות מקיפות, השוואה מלאה בין החברות והרחבות מושלמות לצרכים האישיים שלך.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-md card-shadow hover:scale-105 transition">
+        <div class="text-[#00A060] text-4xl mb-4"><i class="fas fa-shield-alt"></i></div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">ביטוח חיים</h3>
+        <p class="text-gray-600">
+          הגנה על יקיריך עם כיסויים גמישים וחכמים, המותאמים למצב המשפחתי והפיננסי שלך.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-md card-shadow hover:scale-105 transition">
+        <div class="text-[#20A0E0] text-4xl mb-4"><i class="fas fa-chart-line"></i></div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">פתרונות פיננסיים</h3>
+        <p class="text-gray-600">
+          ייעוץ השקעות, קופות גמל להשקעה ופוליסות חיסכון מתקדמות לצמיחה בטוחה של ההון שלך.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-md card-shadow hover:scale-105 transition">
+        <div class="text-[#00A060] text-4xl mb-4"><i class="fas fa-plane"></i></div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">ביטוח נסיעות לחו״ל</h3>
+        <p class="text-gray-600">
+          כיסוי מקיף לנסיעות לחו״ל – כולל PassportCard, טיפול מהיר ומוקד 24/7 בעולם.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-md card-shadow hover:scale-105 transition">
+        <div class="text-[#20A0E0] text-4xl mb-4"><i class="fas fa-hand-holding-usd"></i></div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">ייעוץ אישי</h3>
+        <p class="text-gray-600">
+          פגישת ייעוץ אישית, ללא התחייבות, להתאמת הפתרונות המדויקים ביותר עבורך.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-16 px-4 md:px-10 lg:px-20 bg-white" id="testimonials">
+  <div class="container mx-auto fade-in">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">לקוחות ממליצים</h2>
+    <p class="text-xl text-center text-gray-600 mb-12">הקולות שמאחורי ההצלחה</p>
+
+    <div class="testimonials-container flex overflow-x-auto pb-8 space-x-reverse space-x-6 scrollbar-hide">
+      <!-- דוגמה 1 -->
+      <div class="testimonial-card bg-[#F9FAF4] p-6 rounded-xl shadow-md flex-shrink-0">
+        <div class="flex items-center mb-4">
+          <img src="https://via.placeholder.com/60x60?text=D" alt="" class="w-12 h-12 rounded-full mr-4">
+          <div>
+            <h4 class="font-bold text-gray-800">דוד לוי</h4>
+            <div class="flex text-yellow-400"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          </div>
+        </div>
+        <p class="text-gray-600">
+          “איתי בנה לי תיק פנסיה מאוזן ויעיל עם תשואות מצוינות. שירות ברמה שלא הכרתי – ממליץ בחום.”
+        </p>
+      </div>
+
+      <!-- דוגמה 2 -->
+      <div class="testimonial-card bg-[#F9FAF4] p-6 rounded-xl shadow-md flex-shrink-0">
+        <div class="flex items-center mb-4">
+          <img src="https://via.placeholder.com/60x60?text=S" alt="" class="w-12 h-12 rounded-full mr-4">
+          <div>
+            <h4 class="font-bold text-gray-800">שרה כהן</h4>
+            <div class="flex text-yellow-400"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          </div>
+        </div>
+        <p class="text-gray-600">
+          “החלפתי פוליסת בריאות דרך איתי וחסכתי אלפי שקלים. רמת מקצועיות ושירות מהגבוהות שנתקלתי בהן.”
+        </p>
+      </div>
+
+      <!-- דוגמה 3 -->
+      <div class="testimonial-card bg-[#F9FAF4] p-6 rounded-xl shadow-md flex-shrink-0">
+        <div class="flex items-center mb-4">
+          <img src="https://via.placeholder.com/60x60?text=M" alt="" class="w-12 h-12 rounded-full mr-4">
+          <div>
+            <h4 class="font-bold text-gray-800">מיכל אברהם</h4>
+            <div class="flex text-yellow-400"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+          </div>
+        </div>
+        <p class="text-gray-600">
+          “סגרנו ביטוח חיים לכל המשפחה – ההסברים היו סופר-ברורים והפתרון מותאם בדיוק לצרכים שלנו.”
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA פס גרדיאנט -->
+<section class="py-16 px-4 md:px-10 lg:px-20 gradient-bg text-white">
+  <div class="container mx-auto text-center fade-in">
+    <h2 class="text-3xl font-bold mb-6">תנו לנו לדאוג לעתיד הפיננסי שלכם</h2>
+    <p class="text-xl mb-8 max-w-2xl mx-auto">השאירו פרטים כעת וקבלו ייעוץ יוקרתי ללא עלות.</p>
+    <a href="#contact" class="bg-white text-[#00A060] hover:bg-gray-100 px-8 py-3 rounded-lg font-medium text-lg inline-block transition">
+      אני רוצה לשמוע עוד&nbsp;<i class="fas fa-arrow-left mr-2"></i>
+    </a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-16 px-4 md:px-10 lg:px-20 bg-white" id="faq">
+  <div class="container mx-auto max-w-4xl fade-in">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">שאלות נפוצות</h2>
+    <p class="text-xl text-center text-gray-600 mb-12">כל התשובות במקום אחד</p>
+
+    <!-- פריט FAQ לדוגמה -->
+    <div class="space-y-4">
+      <div class="border border-gray-200 rounded-lg overflow-hidden">
+        <button class="faq-toggle w-full text-right p-4 bg-gray-50 hover:bg-gray-100 font-medium text-gray-800 flex justify-between items-center">
+          <span>כמה עולה ייעוץ פנסיוני?</span>
+          <i class="fas fa-chevron-down transition-transform"></i>
+        </button>
+        <div class="accordion-content px-4">
+          <div class="py-4 text-gray-600">
+            הייעוץ הראשוני ניתן ללא עלות וללא התחייבות. העמלות משולמות ע״י חברות הביטוח – כך שהשירות עבורך הוא שקוף וללא תוספת תשלום.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ נוסף ... -->
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-12 px-4 md:px-10 lg:px-20">
+  <div class="container mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- טור 1 -->
+      <div class="fade-in">
+        <img src="לוגו שקוף לבן.PNG" alt="לוגו איתי צאיג" class="h-16 w-auto mb-4">
+        <p class="text-gray-300 mb-4">
+          ייעוץ אישי ומקצועי לפנסיה, ביטוחים ופתרונות פיננסיים מתקדמים – עם אחריות מלאה לשקט הפיננסי שלך.
+        </p>
+        <div class="flex space-x-reverse space-x-4 text-xl">
+          <a href="https://facebook.com/prosureins" target="_blank" aria-label="Facebook" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/972533321364" target="_blank" aria-label="WhatsApp"  class="text-gray-300 hover:text-white"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:itay@prosure-ins.com"         aria-label="Email"    class="text-gray-300 hover:text-white"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <!-- טור 2 -->
+      <div class="fade-in">
+        <h3 class="text-xl font-bold mb-4">יצירת קשר</h3>
+        <ul class="space-y-2">
+          <li class="flex items-center"><i class="fas fa-phone-alt mr-2 text-[#00A060]"></i><a href="tel:0533321364" class="hover:text-[#20A0E0]">053-3321364</a></li>
+          <li class="flex items-center"><i class="fas fa-envelope mr-2 text-[#00A060]"></i><a href="mailto:itay@prosure-ins.com" class="hover:text-[#20A0E0]">itay@prosure-ins.com</a></li>
+          <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2 text-[#00A060]"></i><span>האורזים 2, נתניה</span></li>
+          <li class="flex items-center"><i class="fas fa-clock mr-2 text-[#00A060]"></i><span>א׳-ה׳ 09:00-18:00</span></li>
+        </ul>
+      </div>
+
+      <!-- טור 3 -->
+      <div class="fade-in">
+        <h3 class="text-xl font-bold mb-4">קישורים מהירים</h3>
+        <ul class="space-y-2">
+          <li><a href="#about" class="text-gray-300 hover:text-white">אודות</a></li>
+          <li><a href="#services" class="text-gray-300 hover:text-white">שירותים</a></li>
+          <li><a href="#testimonials" class="text-gray-300 hover:text-white">לקוחות ממליצים</a></li>
+          <li><a href="#faq" class="text-gray-300 hover:text-white">שאלות נפוצות</a></li>
+          <li><a href="#contact" class="text-gray-300 hover:text-white">השארת פרטים</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 fade-in">
+      © 2025 Itay Tzaig Insurance Agency – כל הזכויות שמורות
+    </div>
+  </div>
+</footer>
+
+<!-- סקריפט -->
+<script>
+  /* אימות טופס */
+  const form=document.getElementById('contactForm');
+  form.addEventListener('submit',e=>{
+    e.preventDefault();
+    const phone=document.getElementById('phone');
+    const phoneError=document.getElementById('phoneError');
+    const email=document.getElementById('email');
+    const emailError=document.getElementById('emailError');
+    const phoneOK=/^[0-9]{9,10}$/.test(phone.value);
+    const emailOK=/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email.value);
+
+    phoneError.classList.toggle('hidden',phoneOK);
+    emailError.classList.toggle('hidden',emailOK);
+    if(!phoneOK||!emailOK) return;
+
+    alert('תודה! נחזור אליך בהקדם.');
+    form.reset();
+    /* כאן שולחים ל-Webhook / מייל אמיתי */
+  });
+
+  /* אקורדיון FAQ */
+  document.querySelectorAll('.faq-toggle').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const pane=btn.nextElementSibling;
+      const ico=btn.querySelector('i');
+      if(pane.style.maxHeight){
+        pane.style.maxHeight=null;ico.style.transform='rotate(0deg)';
+      }else{
+        pane.style.maxHeight=pane.scrollHeight+'px';ico.style.transform='rotate(180deg)';
+      }
+    });
+  });
+
+  /* אנימציית גלילה */
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(e=>e.isIntersecting&&e.target.classList.add('visible'));
+  },{threshold:.1});
+  document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+</script>
+</body>
 </html>
